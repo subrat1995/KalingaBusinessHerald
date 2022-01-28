@@ -7,12 +7,11 @@ const userRouter= require("./api/users/user.router");
 
 app.use(express.json())
 
-app.get("/", (req, res) => {
-    res.json({
-        message: "testing"
-    })
-});
-
+// app.get("/api", (req, res) => {
+//     res.json({
+//         message: "testing"
+//     })
+// });
 app.use('/api/users', userRouter);
 
 app.listen(process.env.APP_PORT, () => {
